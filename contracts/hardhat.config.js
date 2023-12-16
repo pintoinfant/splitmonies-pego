@@ -64,6 +64,12 @@ module.exports = {
             gasPrice: 500000000000,
             allowUnlimitedContractSize: true,
           },
+          pegoMainNet: {
+            url: "https://pegorpc.com",
+            accounts: [process.env.PRIVATE_KEY],
+            chainId: 20201022,
+            allowUnlimitedContractSize: true,
+          },
         // sepolia: {
         //     url: SEPOLIA_RPC_URL,
         //     accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
