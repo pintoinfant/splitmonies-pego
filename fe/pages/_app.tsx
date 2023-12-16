@@ -87,7 +87,7 @@ const MumbaiEVM = {
 };
 
 const pegoTestNet = {
-  id: 80001,
+  id: 123456,
   name: "PEGO Testnet",
   network: "PEGO Testnet",
   iconUrl:
@@ -108,13 +108,35 @@ const pegoTestNet = {
   testnet: true,
 };
 
+const pegoMainnet = {
+  id: 20201022,
+  name: "PEGO",
+  network: "PEGO",
+  iconUrl:
+    "https://cdn.dorahacks.io/static/files/188c028468557368d12717c46b1bd63e.jpg",
+  iconBackground: "#fff",
+  nativeCurrency: {
+    name: "PG",
+    symbol: "PG",
+    decimals: 18,
+  },
+  rpcUrls: {
+    public: { http: ["https://pegorpc.com"] },
+    default: { http: ["https://pegorpc.com"] },
+  },
+  blockExplorers: {
+    default: { name: "pegoscan", url: "https://scan.pego.network" },
+  },
+  testnet: false,
+};
+
 export default function App({ Component, pageProps }: AppProps) {
   const pathname = usePathname();
   const [ready, setReady] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const { chains, publicClient } = configureChains(
-    [pegoTestNet],
+    [pegoMainnet],
     [publicProvider()]
   );
 

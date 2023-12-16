@@ -60,10 +60,10 @@ export default function Index() {
       amount: "0.0001",
     },
   ];
-  const {data:currentBalance} = useBalance({
-    address,
-    chainId: 123456
-  })
+  // const {data:currentBalance} = useBalance({
+  //   address,
+  //   chainId: 123456
+  // })
   const [balance, setBalance] = React.useState<any>(0);
 
   const {
@@ -102,7 +102,7 @@ export default function Index() {
             Available Balance
           </div>
           <div className="text-gra-600 text-3xl font-black text-center">
-            {parseInt(currentBalance) / 1000000000000000000} DAI
+            {parseInt(balanceData)} DAI
           </div>
         </div>
       </div>

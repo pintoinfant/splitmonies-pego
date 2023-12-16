@@ -156,13 +156,13 @@ export default function GroupPage() {
         wakuNode,
         address as string,
         inputMessage,
-        `/splitmonies-pego/group/${id}`
+        `/splitmonies-pegomain/group/${id}`
       );
       console.log("message pushed...", message);
       setInputMessage("");
       let newMessage = await receiveMessage(
         wakuNode,
-        `/splitmonies-pego/group/${id}`
+        `/splitmonies-pegomain/group/${id}`
       );
       console.log(newMessage);
       // await queryMessage(wakuNode)
@@ -189,10 +189,10 @@ export default function GroupPage() {
         if (!wakuNode) {
           console.log("Node not created");
         } else {
-          console.log("querying message...", `/splitmonies-pego/group/${id}`);
+          console.log("querying message...", `/splitmonies-pegomain/group/${id}`);
           const messages = await retrieveExistingMessages(
             wakuNode,
-            `/splitmonies-pego/group/${id}`
+            `/splitmonies-pegomain/group/${id}`
             // `/js-waku-examples/1/chat/proto`
           );
           setMessages(messages);

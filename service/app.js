@@ -20,10 +20,10 @@ const client = new MongoClient(uri, {
 const db = client.db("splitmonie-db");
 
 const provider = new ethers.providers.JsonRpcProvider(
-  "https://rpc.pegotest.net"
+  "https://pegorpc.com"
 );
 
-const splitMonieContract = require("../contracts/deployments/pegoTestNet/SplitMoney.json");
+const splitMonieContract = require("../contracts/deployments/pegoMainnet/SplitMoney.json");
 
 const splitMonie = new ethers.Contract(
   splitMonieContract.address,

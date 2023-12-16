@@ -1,5 +1,5 @@
-import SplitMoneyContract from "../../contracts/deployments/pegoTestNet/SplitMoney.json";
-import SMTokenContract from "../../contracts/deployments/pegoTestNet/DAI.json";
+import SplitMoneyContract from "../../contracts/deployments/pegoMainNet/SplitMoney.json";
+import SMTokenContract from "../../contracts/deployments/pegoMainNet/DAI.json";
 
 // type Address = `0x${string}`;
 
